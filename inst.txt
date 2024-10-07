@@ -1,0 +1,31 @@
+Download and install Python --version 3.6.6
+
+create virtual environment
+$python -m venv env 
+$env\scripts\activate.bat
+
+download and install bottleneck wheel (Bottleneck-1.3.7rc1-cp36-cp36m-win_amd64.whl)
+https://pypi.tuna.tsinghua.edu.cn/simple/bottleneck/
+https://pypi.tuna.tsinghua.edu.cn/packages/08/84/52741c9321c0958aa4caa5c2ad859e36bc39f0871cf8fb69fd36d35ae589/Bottleneck-1.3.7rc1-cp36-cp36m-win_amd64.whl#sha256=581c11a6fd208aab471a9b23fac7c5fda378d1818576619f4a585091add1af3f
+
+pip install <path>\Bottleneck-1.3.7rc1-cp36-cp36m-win_amd64.whl
+
+install inltk and torch==1.3.1
+$pip install inltk
+$pip install torch==1.3.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+
+
+install sklearn
+$pip install scikit-learn
+
+manually download the model
+find it in 
+env\Lib\site-packages\inltk\config
+https://www.dropbox.com/s/8ivj97gaprhq5pv/gujarati_lm.model?raw=1
+
+paste it to 
+env\Lib\site-packages\inltk\models
+
+app
+pip install flask
+python app.py
